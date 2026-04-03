@@ -150,13 +150,43 @@ graph TD
 
 | 篇章 | 状态 | 文档数 | 说明 |
 |------|------|--------|------|
-| 基础篇 | ✅ 100% | 5 | Homebrew、nvm、Node.js、Git、环境验证 |
+| 基础篇 | ✅ 100% | 11 | 环境搭建、工具安装、第一个项目 |
 | 进阶篇 | ✅ 100% | 4 | Agent、MCP、Prompt、Rules |
 | 实战篇 | ✅ 100% | 3 | ClaudeCode、Cursor、Codex |
 | 大师篇 | ✅ 100% | 3 | 多Agent、远程Coding、高级工作流 |
 | 资源汇总 | ✅ 100% | 1 | 官方文档、GitHub仓库、社区资源 |
+| 示例代码 | ✅ 100% | 2 | AGENTS模板、Swift代码模板 |
 
-**总计**：16 个核心文档 + 4 个辅助文档 = 20 个 Markdown 文件
+**总计**：24 个 Markdown 文件
+
+---
+
+## 🚀 快速导航
+
+**新手入门**：
+1. [环境搭建](./docs/基础篇/01-环境搭建/README.md) - 安装必备工具
+2. [工具安装](./docs/基础篇/02-工具安装/README.md) - 安装 AI 编程工具
+3. [第一个项目](./docs/基础篇/03-第一个项目/README.md) - 实战练习
+
+**深入学习**：
+1. [Agent 概念](./docs/进阶篇/01-Agent概念/README.md) - 理解 AI Agent
+2. [MCP 协议](./docs/进阶篇/02-MCP协议/README.md) - 连接外部世界
+3. [Prompt 技巧](./docs/进阶篇/03-Prompt技巧/README.md) - 高效沟通
+
+**实战提升**：
+1. [Claude Code](./docs/实战篇/01-ClaudeCode实战/README.md) - 终端 AI 编程
+2. [Cursor](./docs/实战篇/02-Cursor实战/README.md) - AI IDE 使用
+3. [Codex](./docs/实战篇/03-Codex实战/README.md) - GPT-5 驱动
+
+**大师之路**：
+1. [多 Agent 协作](./docs/大师篇/01-多Agent协作/README.md) - 团队协作
+2. [远程 Coding](./docs/大师篇/02-OpenClaw远程Coding/README.md) - 随时随地
+3. [高级工作流](./docs/大师篇/03-高级工作流/README.md) - 自动化实践
+
+**实用资源**：
+1. [AGENTS 模板](./examples/AGENTS-examples.md) - 配置模板
+2. [Swift 模板](./examples/swift-templates.md) - 代码模板
+3. [资源汇总](./resources/README.md) - 官方文档
 
 ## 📜 许可证
 
