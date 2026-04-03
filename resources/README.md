@@ -2,23 +2,47 @@
 
 > 精选资源，持续更新
 
-## 📚 官方文档
+## 📚 官方文档（最可信）
+
+> ⭐ 优先参考官方文档，信息最权威、最新
 
 ### AI 编程工具
 
-| 工具 | 文档链接 | 说明 |
-|------|----------|------|
-| Claude Code | [docs.anthropic.com](https://docs.anthropic.com/claude-code) | Anthropic 官方文档 |
-| Cursor | [cursor.com/docs](https://cursor.com/docs) | Cursor IDE 文档 |
-| Codex CLI | [developers.openai.com/codex](https://developers.openai.com/codex/cli) | OpenAI Codex 文档 |
-| OpenClaw | [docs.openclaw.ai](https://docs.openclaw.ai/) | OpenClaw 官方文档 |
+| 工具 | 文档链接 | 可信度 | 说明 |
+|------|----------|--------|------|
+| Claude Code | [docs.anthropic.com](https://docs.anthropic.com/claude-code) | ⭐⭐⭐⭐⭐ | Anthropic 官方文档 |
+| Codex CLI | [developers.openai.com/codex](https://developers.openai.com/codex/cli) | ⭐⭐⭐⭐⭐ | OpenAI Codex 文档 |
+| OpenClaw | [docs.openclaw.ai](https://docs.openclaw.ai/) | ⭐⭐⭐⭐⭐ | OpenClaw 官方文档 |
+| Cursor | [cursor.com/docs](https://cursor.com/docs) | ⭐⭐⭐⭐⭐ | Cursor IDE 文档 |
+
+### iOS 开发（官方）
+
+| 资源 | 链接 | 可信度 | 说明 |
+|------|------|--------|------|
+| Apple Developer | [developer.apple.com](https://developer.apple.com/) | ⭐⭐⭐⭐⭐ | Apple 官方开发者门户 |
+| Swift 文档 | [swift.org/documentation](https://swift.org/documentation/) | ⭐⭐⭐⭐⭐ | Swift 官方文档 |
+| SwiftUI 教程 | [developer.apple.com/tutorials/swiftui](https://developer.apple.com/tutorials/swiftui) | ⭐⭐⭐⭐⭐ | Apple 官方 SwiftUI 教程 |
 
 ### 协议与标准
 
-| 协议 | 文档链接 | 说明 |
-|------|----------|------|
-| MCP | [modelcontextprotocol.io](https://modelcontextprotocol.io/) | Model Context Protocol 官方 |
-| AGENTS.md | [agentsmd.io](https://agentsmd.io/) | AI 配置文件最佳实践 |
+| 协议 | 文档链接 | 可信度 | 说明 |
+|------|----------|--------|------|
+| MCP | [modelcontextprotocol.io](https://modelcontextprotocol.io/) | ⭐⭐⭐⭐⭐ | Model Context Protocol 官方 |
+
+## 📦 GitHub 官方仓库（次优先）
+
+> 源码最真实，示例最可靠
+
+| 项目 | 链接 | 说明 |
+|------|------|------|
+| [openai/codex](https://github.com/openai/codex) | Codex CLI 源码 | 包含完整文档和示例 |
+| [anthropics/claude-code](https://github.com/anthropics/claude-code) | Claude Code 源码 | 官方配置示例 |
+| [modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers) | MCP 服务器集合 | 官方实现参考 |
+| [openclaw/openclaw](https://github.com/openclaw/openclaw) | OpenClaw 源码 | 开源源码和文档 |
+
+## 🌟 社区资源（需验证）
+
+> 优质社区内容，建议与官方文档交叉验证
 
 ## 🛠 开发工具
 

@@ -151,6 +151,54 @@ aicoding-guide-book/
 - resources/：资源汇总
 - examples/：更多示例
 
+## 📚 信息来源规范
+
+### 可信度优先级
+
+**Tier 1 - 官方文档（最可信，优先引用）**
+- Anthropic 官网：docs.anthropic.com
+- OpenAI 官网：developers.openai.com
+- Apple Developer：developer.apple.com
+- MCP 官方：modelcontextprotocol.io
+- OpenClaw 官方：docs.openclaw.ai
+
+**Tier 2 - GitHub 官方仓库（次优先）**
+- openai/codex
+- anthropics/claude-code
+- modelcontextprotocol/servers
+- openclaw/openclaw
+
+**Tier 3 - 技术社区（需验证）**
+- Stack Overflow
+- Medium 技术博客
+- 掘金、知乎专栏
+- 个人技术博客
+
+**Tier 4 - 其他（谨慎参考）**
+- 第三方教程网站
+- 未经验证的内容
+
+### 引用规范
+
+1. **优先使用官方文档**
+   - 链接到官方文档而非第三方解读
+   - 引用官方示例代码
+
+2. **标注来源**
+   ```markdown
+   来源：[官方文档](链接)
+   参考：[GitHub 仓库](链接)
+   ```
+
+3. **版本时效性**
+   - 注明文档更新日期
+   - 使用最新版本的文档
+   - 过时内容及时更新
+
+4. **交叉验证**
+   - Tier 3+ 的信息需与官方文档交叉验证
+   - 有疑问时以官方文档为准
+
 ## 🔄 更新频率
 
 - **实时更新** - 发现错误立即修正
