@@ -44,15 +44,39 @@
 
 ## 📚 推荐学习路径
 
+```mermaid
+graph TD
+    A[🏠 开始学习] --> B[基础篇]
+    B --> C[进阶篇]
+    C --> D[实战篇]
+    D --> E[大师篇]
+
+    B --> B1[环境搭建]
+    B --> B2[工具安装]
+    B --> B3[第一个项目]
+
+    C --> C1[Agent概念]
+    C --> C2[MCP协议]
+    C --> C3[Prompt技巧]
+    C --> C4[Rules与Skill]
+
+    D --> D1[ClaudeCode]
+    D --> D2[Cursor]
+    D --> D3[Codex]
+
+    E --> E1[多Agent协作]
+    E --> E2[远程Coding]
+    E --> E3[高级工作流]
+
+    style A fill:#e1f5ff
+    style E fill:#c8e6c9
 ```
-基础篇 (1-2周)
-    ↓
-进阶篇 (2-3周)
-    ↓
-实战篇 (边学边练)
-    ↓
-大师篇 (按需学习)
-```
+
+**预计学习时间**：
+- 基础篇：1-2 周（边学边练）
+- 进阶篇：2-3 周（深入理解）
+- 实战篇：持续实践（技能提升）
+- 大师篇：按需学习（进阶探索）
 
 ## 🛠 技术栈
 
@@ -63,6 +87,29 @@
 | Codex CLI | OpenAI 命令行工具 | ⭐⭐⭐⭐ |
 | OpenClaw | 远程 AI Agent 网关 | ⭐⭐⭐⭐ |
 
+## 📖 章节导航
+
+### 基础篇 - 打好地基
+- [环境搭建](./docs/基础篇/01-环境搭建/README.md) - Homebrew、nvm、Node.js 配置
+- [工具安装](./docs/基础篇/02-工具安装/) - Claude Code、Cursor、Codex 安装
+- [第一个项目](./docs/基础篇/03-第一个项目/) - 用 AI 完成实战项目
+
+### 进阶篇 - 核心概念
+- [Agent 概念](./docs/进阶篇/01-Agent概念/README.md) - AI Agent 的组成与协作
+- [MCP 协议](./docs/进阶篇/02-MCP协议/README.md) - Model Context Protocol 详解
+- [Prompt 技巧](./docs/进阶篇/03-Prompt技巧/) - 高质量 Prompt 方法论
+- [Rules 与 Skill](./docs/进阶篇/04-Rules与Skill/) - AGENTS.md 配置
+
+### 实战篇 - 真刀真枪
+- [Claude Code 实战](./docs/实战篇/01-ClaudeCode实战/README.md) - 终端 AI 编程
+- [Cursor 实战](./docs/实战篇/02-Cursor实战/) - AI IDE 使用指南
+- [Codex 实战](./docs/实战篇/03-Codex实战/) - OpenAI 命令行工具
+
+### 大师篇 - 登峰造极
+- [多 Agent 协作](./docs/大师篇/01-多Agent协作/README.md) - 并行工作编排
+- [OpenClaw 远程 Coding](./docs/大师篇/02-OpenClaw远程Coding/README.md) - 随时随地编程
+- [高级工作流](./docs/大师篇/03-高级工作流/) - CI/CD 集成
+
 ## 📝 贡献指南
 
 欢迎提交 Issue 和 Pull Request！
@@ -70,6 +117,7 @@
 - 发现错误 → 提 Issue
 - 有好案例 → 提 PR
 - 有建议 → 讨论区交流
+- 想要新章节 → 提 Feature Request
 
 ## 📜 许可证
 
