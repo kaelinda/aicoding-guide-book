@@ -1,127 +1,115 @@
-# 5 分钟快速体验 AI 编程
+# 🚀 快速开始
 
-> 还没准备好？先来个 5 分钟快速体验，感受 AI 编程的魅力！
-
-## 🎯 目标
-
-用最短的时间，体验 AI 辅助编程的完整流程。
-
-## 📋 前置条件
-
-- macOS 系统
-- 已安装 Xcode（iOS 开发者）
-- 有 GitHub 账号
-
-## 🚀 开始体验
-
-### 方案一：Cursor（推荐新手）
-
-1. **下载安装 Cursor**
-   - 访问：https://cursor.sh
-   - 下载 macOS 版本
-   - 安装并打开
-
-2. **打开一个 iOS 项目**
-   ```bash
-   # 如果没有现成项目，创建一个简单的
-   cd ~/Desktop
-   mkdir DemoApp
-   cd DemoApp
-   # 用 Cursor 打开
-   cursor .
-   ```
-
-3. **开始对话**
-   - 按 `Cmd + L` 打开 AI 对话框
-   - 输入：`帮我创建一个简单的 Swift 文件，输出 Hello World`
-   - 回车，等待 AI 生成代码
-
-4. **体验智能补全**
-   - 在编辑器中输入 `func `（注意空格）
-   - 观察 AI 如何自动补全
-
-### 方案二：Claude Code（推荐进阶）
-
-1. **安装 Claude Code**
-   ```bash
-   # 需要先安装 Node.js（后续章节详细讲）
-   npm install -g @anthropic-ai/claude-code
-   ```
-
-2. **在项目中启动**
-   ```bash
-   cd ~/Desktop/DemoApp
-   claude
-   ```
-
-3. **提出需求**
-   ```
-   你：创建一个 Swift 文件，实现一个简单的计数器类
-   ```
-
-4. **观察 Claude 执行**
-   - Claude 会自动创建文件
-   - 编写代码
-   - 甚至运行测试（如果有）
-
-### 方案三：Codex CLI（OpenAI 粉丝）
-
-1. **安装 Codex**
-   ```bash
-   npm install -g @openai/codex
-   ```
-
-2. **启动并登录**
-   ```bash
-   codex
-   # 按提示登录 ChatGPT 账号
-   ```
-
-3. **开始编程**
-   ```
-   你：帮我写一个 Swift 扩展，为 String 添加 md5 方法
-   ```
-
-## ✨ 你刚才体验了什么
-
-| 功能 | 说明 |
-|------|------|
-| 自然语言编程 | 用中文描述需求，AI 生成代码 |
-| 智能补全 | AI 预测你的下一步操作 |
-| 上下文理解 | AI 理解你的项目结构 |
-| 自动执行 | AI 直接修改文件，不用复制粘贴 |
-
-## 🎓 下一步
-
-觉得有意思？继续学习：
-
-- **系统学习** → [基础篇：环境搭建](./基础篇/01-环境搭建/README.md)
-- **深入了解概念** → [进阶篇：Agent 概念](./进阶篇/01-Agent概念/README.md)
-- **选择工具深入** → [实战篇](./实战篇/)
-
-## 💡 常见问题
-
-### Q: 哪个工具最好？
-**A:** 没有最好，只有最适合：
-- 新手入门 → Cursor（界面友好）
-- 重度终端用户 → Claude Code（命令行体验好）
-- OpenAI 生态用户 → Codex CLI（与 ChatGPT 打通）
-
-### Q: 需要付费吗？
-**A:** 
-- Cursor：有免费额度，Pro 版 $20/月
-- Claude Code：需要 Claude Pro 订阅（$20/月）
-- Codex CLI：需要 ChatGPT Plus 订阅（$20/月）
-
-### Q: AI 会取代程序员吗？
-**A:** 不会。AI 是工具，提升效率，但：
-- 需求分析仍需人工
-- 架构设计需要经验
-- 代码审查需要判断
-- 复杂问题需要创造力
-
-**AI 是助手，不是替代。**
+> 5 分钟上手 AI 编程
 
 ---
 
-**准备好了吗？** → [开始系统学习](./基础篇/01-环境搭建/README.md)
+## 你能学到什么
+
+- ✅ 安装 Claude Code / Codex
+- ✅ 运行第一个 AI 编程任务
+- ✅ 理解基本工作流程
+- ✅ 获得第一个编程成果
+
+---
+
+## 第一步：安装工具（1分钟）
+
+### Claude Code（推荐）
+
+```bash
+# macOS
+brew install --cask claude
+
+# 验证安装
+claude --version
+```
+
+### Codex
+
+```bash
+# pip 安装
+pip install openai-codex
+
+# 验证安装
+codex --version
+```
+
+---
+
+## 第二步：登录账号（1分钟）
+
+```bash
+# Claude Code 登录
+claude auth
+
+# Codex 登录
+codex auth
+```
+
+按提示打开浏览器完成授权。
+
+---
+
+## 第三步：运行第一个任务（2分钟）
+
+### 启动 Claude Code
+
+```bash
+# 进入项目目录
+cd ~/Projects/MyApp
+
+# 启动 Claude Code
+claude
+```
+
+### 输入你的第一个指令
+
+```
+帮我添加一个用户登录页面，使用 SwiftUI
+```
+
+Claude Code 会自动：
+1. 📖 分析现有代码结构
+2. ✨ 生成登录页面代码
+3. 📝 解释做了什么
+
+---
+
+## 第四步：验收结果（1分钟）
+
+```
+代码完成了，看看是否满足需求：
+
+✅ 已创建 LoginView.swift
+✅ 使用 SwiftUI TextField 和 SecureField
+✅ 添加了登录按钮
+⚠️ 需要添加表单验证逻辑
+```
+
+**你说："可以，运行测试看看"</p>
+
+Claude Code 会运行测试并汇报结果。
+
+---
+
+## 下一步
+
+| 章节 | 内容 |
+|------|------|
+| [📦 工具安装](./基础篇/02-工具安装/README.md) | 详细安装指南 |
+| [📝 第一个项目](./基础篇/03-第一个项目/README.md) | 创建完整项目 |
+| [💡 Prompt 技巧](./进阶篇/03-Prompt技巧/README.md) | 写出好指令 |
+
+---
+
+## 常见问题
+
+**Q: 需要联网吗？**
+A: 是的，AI 编程需要网络连接。
+
+**Q: 代码安全吗？**
+A: Claude Code 代码不上传，仅用于生成响应。
+
+**Q: 支持哪些语言？**
+A: Swift、Python、JavaScript、TypeScript 等主流语言。
