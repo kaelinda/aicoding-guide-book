@@ -80,10 +80,11 @@ graph TD
 
 ## 📊 项目统计
 
-- **文档总数**：31 个 Markdown 文件
-- **总行数**：10,000+ 行
-- **Git 提交**：12 次增量提交
+- **文档总数**：36 个 Markdown 文件
+- **总行数**：12,000+ 行
+- **Git 提交**：14 次增量提交
 - **Git 历史**：完整可追溯
+- **开源许可**：MIT License
 
 ## 📋 完成度
 
@@ -154,8 +155,9 @@ graph TD
 | 进阶篇 | ✅ 100% | 4 | Agent、MCP、Prompt、Rules |
 | 实战篇 | ✅ 100% | 3 | ClaudeCode、Cursor、Codex |
 | 大师篇 | ✅ 100% | 3 | 多Agent、远程Coding、高级工作流 |
-| 实用文档 | ✅ 100% | 5 | FAQ、快速参考、最佳实践、资源汇总 |
+| 实用文档 | ✅ 100% | 7 | FAQ、快速参考、最佳实践、术语表、学习路径、资源汇总 |
 | 示例代码 | ✅ 100% | 2 | AGENTS模板、Swift代码模板 |
+| 项目文档 | ✅ 100% | 3 | CHANGELOG、CONTRIBUTING、LICENSE |
 
 **总计**：24 个 Markdown 文件
 
@@ -189,7 +191,14 @@ graph TD
 3. [故障排查](./docs/FAQ.md) - 常见问题解决
 4. [快速参考](./docs/cheat-sheet.md) - 速查卡片
 5. [最佳实践](./docs/best-practices.md) - 实战案例
-6. [资源汇总](./resources/README.md) - 官方文档
+6. [术语表](./docs/glossary.md) - 术语速查
+7. [学习路径](./docs/learning-path.md) - 4周学习计划
+8. [资源汇总](./resources/README.md) - 官方文档
+
+**项目信息**：
+- [变更日志](./CHANGELOG.md) - 版本历史
+- [贡献指南](./CONTRIBUTING.md) - 如何贡献
+- [开源许可](./LICENSE) - MIT License
 
 ## 📜 许可证
 
