@@ -39,6 +39,13 @@ jobs:
     - name: Build GitBook
       run: gitbook build . _book
     
+    - name: Copy robots.txt
+      run: |
+        if [ -f robots.txt ]; then
+          cp robots.txt _book/
+          echo "✅ robots.txt copied"
+        fi
+    
     - name: Setup Pages
       uses: actions/configure-pages@v4
     

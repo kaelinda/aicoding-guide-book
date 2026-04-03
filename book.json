@@ -1,8 +1,10 @@
 {
-  "title": "AI Coding Guide Book",
-  "description": "从零开始的 AI 编程指南，专为初级开发者打造",
+  "title": "AI Coding Guide Book - AI 编程完全指南",
+  "description": "从零开始的 AI 编程指南，专为初级开发者打造。涵盖 Claude Code、Cursor、Codex 等主流 AI 编程工具，从环境搭建到多 Agent 协作的完整学习路径。",
   "author": "Kael",
+  "authorHome": "https://github.com/kaelinda",
   "language": "zh-hans",
+  "keywords": "AI编程,人工智能编程,Claude Code,Cursor,Codex,GPT-5,AI辅助编程,开发者工具,编程教程",
   "root": ".",
   "structure": {
     "readme": "README.md",
