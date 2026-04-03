@@ -1,0 +1,53 @@
+{
+  "title": "AI Coding Guide Book",
+  "description": "从零开始的 AI 编程指南，专为初级开发者打造",
+  "author": "Kael",
+  "language": "zh-hans",
+  "root": ".",
+  "structure": {
+    "readme": "README.md",
+    "summary": "SUMMARY.md"
+  },
+  "plugins": [
+    "theme-default",
+    "highlight",
+    "search",
+    "sharing",
+    "fontsettings",
+    "livereload"
+  ],
+  "pluginsConfig": {
+    "theme-default": {
+      "showLevel": true,
+      "styles": {
+        "website": "styles/website.css"
+      }
+    },
+    "sharing": {
+      "facebook": false,
+      "twitter": true,
+      "weibo": true,
+      "qq": true,
+      "all": []
+    },
+    "fontsettings": {
+      "theme": "white",
+      "family": "sans",
+      "size": 2
+    }
+  },
+  "styles": {
+    "website": "styles/website.css",
+    "pdf": "styles/pdf.css"
+  },
+  "pdf": {
+    "paperSize": "a4",
+    "fontSize": 12,
+    "margin": {
+      "right": 62,
+      "left": 62,
+      "top": 36,
+      "bottom": 36
+    }
+  }
+}
