@@ -39,11 +39,15 @@ jobs:
     - name: Build GitBook
       run: gitbook build . _book
     
-    - name: Copy robots.txt
+    - name: Copy robots.txt and sitemap.xml
       run: |
         if [ -f robots.txt ]; then
           cp robots.txt _book/
           echo "✅ robots.txt copied"
+        fi
+        if [ -f sitemap.xml ]; then
+          cp sitemap.xml _book/
+          echo "✅ sitemap.xml copied"
         fi
     
     - name: Setup Pages
