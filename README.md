@@ -80,12 +80,12 @@ graph TD
 
 ## 📊 项目统计
 
-- **文档总数**：20 个 Markdown 文件
-- **总行数**：7,785+ 行
-- **总字数**：约 15,000+ 词（英文单词）
-- **Git 提交**：8 次迭代优化
+- **文档总数**：31 个 Markdown 文件
+- **总行数**：10,000+ 行
+- **Git 提交**：12 次增量提交
+- **Git 历史**：完整可追溯
 
-## 🛠 技术栈
+## 📋 完成度
 
 | 工具 | 用途 | 推荐指数 |
 |------|------|----------|
@@ -154,7 +154,7 @@ graph TD
 | 进阶篇 | ✅ 100% | 4 | Agent、MCP、Prompt、Rules |
 | 实战篇 | ✅ 100% | 3 | ClaudeCode、Cursor、Codex |
 | 大师篇 | ✅ 100% | 3 | 多Agent、远程Coding、高级工作流 |
-| 资源汇总 | ✅ 100% | 1 | 官方文档、GitHub仓库、社区资源 |
+| 实用文档 | ✅ 100% | 5 | FAQ、快速参考、最佳实践、资源汇总 |
 | 示例代码 | ✅ 100% | 2 | AGENTS模板、Swift代码模板 |
 
 **总计**：24 个 Markdown 文件
@@ -186,7 +186,10 @@ graph TD
 **实用资源**：
 1. [AGENTS 模板](./examples/AGENTS-examples.md) - 配置模板
 2. [Swift 模板](./examples/swift-templates.md) - 代码模板
-3. [资源汇总](./resources/README.md) - 官方文档
+3. [故障排查](./docs/FAQ.md) - 常见问题解决
+4. [快速参考](./docs/cheat-sheet.md) - 速查卡片
+5. [最佳实践](./docs/best-practices.md) - 实战案例
+6. [资源汇总](./resources/README.md) - 官方文档
 
 ## 📜 许可证
 
