@@ -247,6 +247,10 @@ MIT License - 自由使用，请保留原作者信息
 
 ---
 
+**在线阅读**：
+- [GitBook](https://kaelinda.gitbook.io/aicoding-guide-book)（推荐，自动同步）
+- [GitHub Pages](https://kaelinda.github.io/aicoding-guide-book)（自动部署）
+
 **开始学习** → [基础篇：环境搭建](./docs/基础篇/01-环境搭建/README.md)
 
 **Star ⭐ 本项目，随时查阅最新内容！**
