@@ -1,0 +1,45 @@
+name: Build Smoke Test
+
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    name: GitBook build smoke test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install GitBook CLI
+        run: npm install -g gitbook-cli
+
+      - name: Install plugins
+        run: |
+          if [ -f book.json ]; then
+            gitbook install
+          fi
+
+      - name: Build
+        run: gitbook build . _book
+
+  shellcheck:
+    name: Shellcheck scripts
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install shellcheck
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y shellcheck
+
+      - name: Run shellcheck
+        run: shellcheck scripts/*.sh
