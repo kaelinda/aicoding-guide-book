@@ -1,0 +1,43 @@
+name: 新增内容/选题建议
+description: 提议新增章节、补充示例、完善某一知识点
+title: "[Content] "
+labels: ["content"]
+body:
+  - type: textarea
+    id: motivation
+    attributes:
+      label: 为什么需要这部分内容？
+      description: 读者痛点、使用场景、预期收益
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: 建议大纲
+      description: 章节结构（是什么 / 为什么 / 怎么做 / 最佳实践 / 常见问题 / 小结 / 资源）
+    validations:
+      required: true
+
+  - type: dropdown
+    id: stage
+    attributes:
+      label: 建议归属篇章
+      options:
+        - 基础篇
+        - 进阶篇
+        - 实战篇
+        - 大师篇
+        - 实用资源
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: sources
+    attributes:
+      label: 信息来源
+      options:
+        - label: 我已优先参考官方文档（Tier 1）
+          required: false
+        - label: 我已提供至少 1 个可验证链接
+          required: false
