@@ -1,0 +1,27 @@
+name: 链接失效
+description: 内链/外链失效、跳转错误、SUMMARY 目录断链等
+title: "[Link] "
+labels: ["doc", "link"]
+body:
+  - type: input
+    id: location
+    attributes:
+      label: 链接出现位置
+      description: 例如 SUMMARY.md 或某个 docs 页面
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: 失效链接（原链接）
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: 建议替换链接
+      description: 如果你知道正确链接，请提供
+    validations:
+      required: false
