@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Discussions（提问 / 讨论）
+    url: https://github.com/kaelinda/aicoding-guide-book/discussions
+    about: 适合开放式讨论、经验分享与选题建议
