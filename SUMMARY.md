@@ -79,11 +79,11 @@
 
 ### Cursor 实战
 
-- [基础用法](./docs/实战篇/02-Cursor实战/README.md)
+- [01-基础用法](./docs/实战篇/02-Cursor实战/README.md)
 
 ### Codex 实战
 
-- [使用技巧](./docs/实战篇/03-Codex实战/README.md)
+- [01-使用技巧](./docs/实战篇/03-Codex实战/README.md)
 
 ### 失败案例与修复
 
