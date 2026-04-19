@@ -44,7 +44,7 @@
 
 ## 📚 内容结构
 
-本书按学习路径分为四个阶段：**基础入门 → 核心概念 → 工具实战 → 高阶工作流**。
+本书按学习路径分为五个阶段：**入门 → 基础篇 → 实战篇 → 进阶篇 → 大师篇**。
 
 ### 01 基础篇
 帮助你完成环境搭建、工具安装，并做出第一个 AI 辅助开发项目。
@@ -58,8 +58,27 @@
 - [基础篇：环境搭建](./docs/基础篇/01-环境搭建/README.md)
 - [基础篇：工具安装](./docs/基础篇/02-工具安装/README.md)
 - [基础篇：第一个项目](./docs/基础篇/03-第一个项目/README.md)
+- [基础篇：Agent 与工具](./docs/基础篇/04-Agent与工具/README.md)
+- [基础篇：练习项目](./docs/基础篇/05-练习项目/README.md)
 
-### 02 进阶篇
+### 02 实战篇
+聚焦真实开发场景，学习如何把 AI 工具真正用进项目。
+
+包含内容：
+- Claude Code 实战（13个子章节）
+- Cursor 实战
+- Codex 实战
+- 失败案例与修复
+- iOS 专项场景
+
+入口：
+- [Claude Code 实战](./docs/实战篇/01-ClaudeCode实战/README.md)
+- [Cursor 实战](./docs/实战篇/02-Cursor实战/README.md)
+- [Codex 实战](./docs/实战篇/03-Codex实战/README.md)
+- [失败案例与修复](./docs/实战篇/04-失败案例与修复/README.md)
+- [iOS 专项场景](./docs/实战篇/05-iOS专项场景/README.md)
+
+### 03 进阶篇
 理解 AI 编程背后的关键概念，掌握更稳定、更高质量的协作方式。
 
 包含内容：
@@ -67,6 +86,8 @@
 - MCP 协议
 - Prompt 技巧
 - Rules 与 Skill
+- Cursor 进阶功能
+- Claude Code 新功能
 - Claude Code 环境配置
 
 入口：
@@ -75,19 +96,6 @@
 - [Prompt 技巧](./docs/进阶篇/03-Prompt技巧/README.md)
 - [Rules 与 Skill](./docs/进阶篇/04-Rules与Skill/README.md)
 - [Claude Code 环境配置](./docs/进阶篇/10-ClaudeCode环境配置/README.md)
-
-### 03 实战篇
-聚焦真实开发场景，学习如何把 AI 工具真正用进项目。
-
-包含内容：
-- Claude Code 实战
-- Cursor 实战
-- Codex 实战
-
-入口：
-- [Claude Code 实战](./docs/实战篇/01-ClaudeCode实战/README.md)
-- [Cursor 实战](./docs/实战篇/02-Cursor实战/README.md)
-- [Codex 实战](./docs/实战篇/03-Codex实战/README.md)
 
 ### 04 大师篇
 面向更复杂的协作与自动化场景，进一步拓展 AI 编程工作流。
@@ -101,6 +109,7 @@
 - [多 Agent 协作](./docs/大师篇/01-多Agent协作/README.md)
 - [OpenClaw 远程 Coding](./docs/大师篇/02-OpenClaw远程Coding/README.md)
 - [高级工作流](./docs/大师篇/03-高级工作流/README.md)
+- [驾驭工程：与 AI 智能体协作](./docs/驾驭工程：与AI智能体协作的艺术.md)
 
 ---
 
@@ -128,12 +137,14 @@
 
 | 模块 | 说明 | 入口 |
 |------|------|------|
-| 基础篇 | 环境、工具、入门项目 | [开始学习](./docs/基础篇/01-环境搭建/README.md) |
-| 进阶篇 | 核心概念、Prompt、Rules | [继续深入](./docs/进阶篇/01-Agent概念/README.md) |
+| 入门 | 快速开始 | [开始](./docs/00-quick-start.md) |
+| 基础篇 | 环境、工具、练习项目 | [开始学习](./docs/基础篇/01-环境搭建/README.md) |
 | 实战篇 | 工具实战与开发场景 | [查看实战](./docs/实战篇/01-ClaudeCode实战/README.md) |
+| 进阶篇 | 核心概念、Prompt、Rules | [继续深入](./docs/进阶篇/01-Agent概念/README.md) |
 | 大师篇 | 多 Agent、远程协作、工作流 | [进阶提升](./docs/大师篇/01-多Agent协作/README.md) |
-| 示例模板 | AGENTS、Swift 模板 | [查看 examples](./examples/) |
-| 资源汇总 | 官方文档与外部资料 | [查看 resources](./resources/README.md) |
+| 参考资料 | FAQ、术语表、最佳实践 | [查看参考](./docs/FAQ.md) |
+| iOS 专题 | iOS 开发专项内容 | [查看专题](./docs/ios-ai-skills.md) |
+| 示例模板 | AGENTS、Prompt 模板 | [查看 examples](./examples/) |
 
 ---
 
@@ -142,17 +153,18 @@
 ```text
 aicoding-guide-book/
 ├── README.md
-├── SUMMARY.md
-├── AGENTS.md
-├── CHANGELOG.md
-├── CONTRIBUTING.md
-├── LICENSE
+├── SUMMARY.md          ← GitBook 导航配置
+├── AGENTS.md           ← AI 助手指南
 ├── docs/
-│   ├── 基础篇/
-│   ├── 进阶篇/
-│   ├── 实战篇/
-│   └── 大师篇/
+│   ├── 00-quick-start.md
+│   ├── cheat-sheet.md
+│   ├── 基础篇/          ← 环境搭建、工具安装、练习项目
+│   ├── 实战篇/          ← Claude Code/Cursor/Codex 实战、iOS 专项
+│   ├── 进阶篇/          ← Agent、MCP、Prompt、Rules、环境配置
+│   ├── 大师篇/          ← 多 Agent、OpenClaw、高级工作流
+│   └── 参考资料/         ← FAQ、术语表、最佳实践、GitBook 部署
 ├── examples/
+│   └── prompts/         ← Prompt 模板
 └── resources/
 ```
 

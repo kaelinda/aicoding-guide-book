@@ -63,9 +63,10 @@ Local settings > Project settings > User settings > Managed settings
 
 ## ⚠️ 重要前提
 
-Claude Code 的配置字段在不断更新，以下内容基于 v2.1.x 版本。
+Claude Code 的配置字段在不断更新，以下内容基于 **v2.1.x** 版本（最后同步：2026-04-13）。
 
 建议定期检查官方文档：
+- [官方环境变量文档](https://code.claude.com/docs/en/env-vars)
 - [官方设置文档](https://docs.anthropic.com/zh-CN/docs/claude-code/settings)
 - [官方模型配置](https://docs.anthropic.com/en/docs/claude-code/model-config)
 
