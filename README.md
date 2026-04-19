@@ -144,7 +144,7 @@
 | 大师篇 | 多 Agent、远程协作、工作流 | [进阶提升](./docs/大师篇/01-多Agent协作/README.md) |
 | 参考资料 | FAQ、术语表、最佳实践 | [查看参考](./docs/FAQ.md) |
 | iOS 专题 | iOS 开发专项内容 | [查看专题](./docs/ios-ai-skills.md) |
-| 示例模板 | AGENTS、Prompt 模板 | [查看 examples](./examples/) |
+| 示例模板 | AGENTS、Prompt 模板 | [查看 examples](./docs/examples/) |
 
 ---
 
@@ -152,20 +152,24 @@
 
 ```text
 aicoding-guide-book/
-├── README.md
-├── SUMMARY.md          ← GitBook 导航配置
-├── AGENTS.md           ← AI 助手指南
-├── docs/
-│   ├── 00-quick-start.md
-│   ├── cheat-sheet.md
-│   ├── 基础篇/          ← 环境搭建、工具安装、练习项目
-│   ├── 实战篇/          ← Claude Code/Cursor/Codex 实战、iOS 专项
-│   ├── 进阶篇/          ← Agent、MCP、Prompt、Rules、环境配置
-│   ├── 大师篇/          ← 多 Agent、OpenClaw、高级工作流
-│   └── 参考资料/         ← FAQ、术语表、最佳实践、GitBook 部署
-├── examples/
-│   └── prompts/         ← Prompt 模板
-└── resources/
+├── README.md             ← GitHub 仓库首页
+├── AGENTS.md             ← AI 助手指南
+├── .gitbook.yaml         ← GitBook Git Sync 配置（root: ./docs）
+└── docs/                 ← GitBook 内容根
+    ├── README.md         ← 书的首页
+    ├── SUMMARY.md        ← GitBook 目录
+    ├── 00-quick-start.md
+    ├── cheat-sheet.md
+    ├── 基础篇/            ← 环境搭建、工具安装、练习项目
+    ├── 进阶篇/            ← Agent、MCP、Prompt、Rules、环境配置
+    ├── 实战篇/            ← Claude Code/Cursor/Codex 实战、iOS 专项
+    ├── 大师篇/            ← 多 Agent、OpenClaw、高级工作流
+    ├── ios-*.md          ← iOS 专题（调试、发布、面试、工具）
+    ├── FAQ.md / glossary.md / learning-path.md / best-practices.md
+    └── examples/
+        ├── prompts/      ← Prompt 模板
+        ├── AGENTS-examples.md
+        └── swift-templates.md
 ```
 
 ---
@@ -200,8 +204,8 @@ AI 能生成很多代码，但真正重要的是：
 
 除了主线教程，这个仓库还包含这些内容：
 
-- [AGENTS 配置模板](./examples/AGENTS-examples.md)
-- [Swift 代码模板](./examples/swift-templates.md)
+- [AGENTS 配置模板](./docs/examples/AGENTS-examples.md)
+- [Swift 代码模板](./docs/examples/swift-templates.md)
 - [故障排查指南](./docs/FAQ.md)
 - [快速参考卡片](./docs/cheat-sheet.md)
 - [最佳实践案例](./docs/best-practices.md)

@@ -20,16 +20,20 @@
 
 ```
 aicoding-guide-book/
-├── README.md              # 项目入口
-├── docs/
-│   ├── 00-quick-start.md  # 5分钟快速体验
-│   ├── 基础篇/            # 环境搭建、工具安装
-│   ├── 进阶篇/            # Agent、MCP、Prompt、Rules
-│   ├── 实战篇/            # ClaudeCode、Cursor、Codex
-│   └── 大师篇/            # 多Agent、远程Coding、高级工作流
-├── examples/              # 配套代码示例
-├── resources/             # 资源链接汇总
-└── AGENTS.md             # 本文件
+├── README.md               # GitHub 仓库首页
+├── AGENTS.md               # 本文件
+├── .gitbook.yaml           # GitBook Git Sync 配置（root: ./docs）
+├── docs/                   # GitBook 内容根
+│   ├── README.md           # 书的首页
+│   ├── SUMMARY.md          # 目录（路径相对 docs/）
+│   ├── 00-quick-start.md   # 5分钟快速体验
+│   ├── 基础篇/              # 环境搭建、工具安装
+│   ├── 进阶篇/              # Agent、MCP、Prompt、Rules
+│   ├── 实战篇/              # ClaudeCode、Cursor、Codex
+│   ├── 大师篇/              # 多Agent、远程Coding、高级工作流
+│   ├── ios-*.md            # iOS 专题
+│   └── examples/           # Prompt / AGENTS / Swift 模板
+└── resources/              # 外链资源汇总
 ```
 
 ## ✍️ 写作规范
@@ -93,8 +97,8 @@ aicoding-guide-book/
    - 添加新的最佳实践
 
 3. **添加示例代码**
-   - 放在 `examples/` 目录
-   - 在文档中引用链接
+   - 放在 `docs/examples/` 目录
+   - 在文档中引用链接（GitBook 内容根是 `docs/`，模板必须在其下才会被收录）
 
 ### 质量检查
 
