@@ -1057,4 +1057,4 @@ Level 5: 完整实践
 
 **🎉 恭喜！你已掌握 AI 编程的完整工作流！**
 
-**下一步：** [回到目录](../../README.md) 或 [查看资源汇总](../../resources/README.md)
+**下一步：** [回到目录](../../README.md) 或 [查看资源汇总](https://github.com/kaelinda/aicoding-guide-book/tree/main/resources)

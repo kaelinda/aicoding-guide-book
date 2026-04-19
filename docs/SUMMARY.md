@@ -54,6 +54,7 @@
   - [08-03-ULTRAPLAN 长期规划](进阶篇/08-ClaudeCode新功能/03-ULTRAPLAN长期规划.md)
   - [08-04-语音与浏览器工具](进阶篇/08-ClaudeCode新功能/04-语音与浏览器工具.md)
 - [09-Claude Code 写法教程](进阶篇/09-ClaudeCode写法教程/README.md)
+  - [09-01-claude.md 教程](进阶篇/09-ClaudeCode写法教程/claude.md-教程.md)
 - [10-Claude Code 环境配置](进阶篇/10-ClaudeCode环境配置/README.md)
   - [10-01-环境变量配置](进阶篇/10-ClaudeCode环境配置/01-环境变量配置.md)
   - [10-02-自定义模型配置](进阶篇/10-ClaudeCode环境配置/02-自定义模型配置.md)

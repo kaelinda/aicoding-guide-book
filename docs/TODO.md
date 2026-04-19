@@ -2,17 +2,14 @@
 
 > 内容层面的补全计划。按"先修 bug → 再填占位 → 再做增量"的顺序排优先级。
 
-## 🔴 P0 — 已知存在的坏链 / 盲区（应尽快修）
+## 🔴 P0 — 已知存在的坏链 / 盲区（✅ 已全部修复）
 
-链接检查跑出来的，pre-existing，都是一行两行可修：
+链接检查跑出来的，pre-existing：
 
-- [ ] `docs/进阶篇/10-ClaudeCode环境配置/README.md` 引用了三个不存在的子页，需要**新写**或**从 README 里删掉这三个条目**：
-  - `LLM-gateway.md`（LLM 网关如 LiteLLM / OpenRouter 接入）
-  - `Azure-Foundry.md`（Azure AI Foundry 接入）
-  - `Bedrock.md`（AWS Bedrock 接入）
-- [ ] `docs/大师篇/03-高级工作流/README.md` 里 `../../resources/README.md` 少了一层，应改为 `../../../resources/README.md`（或删掉这个外链，把 resources/ 搬进 docs/ 内）
-- [ ] `docs/基础篇/05-练习项目/README.md` 里 `../实战篇/README.md` 少了一层，应为 `../../实战篇/01-ClaudeCode实战/README.md`
-- [ ] `docs/进阶篇/09-ClaudeCode写法教程/claude.md-教程.md` 存在但**未进 SUMMARY**，要么补进目录，要么合并到 README
+- [x] `docs/进阶篇/10-ClaudeCode环境配置/README.md` 引用的三个未写子页（LLM-gateway / Azure-Foundry / Bedrock）—— 暂时从"相关资源"表里移除，保留一条说明指向本 TODO；三份专题接入指南的撰写收入 P2「工具链完整性」
+- [x] `docs/大师篇/03-高级工作流/README.md` 末尾 `../../resources/README.md` —— 改为 GitHub 绝对链接（`resources/` 位于 `docs/` 之外，GitBook 不会抓）
+- [x] `docs/基础篇/05-练习项目/README.md` 末尾 `../实战篇/README.md` —— 改为 `../../实战篇/01-ClaudeCode实战/README.md`
+- [x] `docs/进阶篇/09-ClaudeCode写法教程/claude.md-教程.md` 孤儿 —— 已在 SUMMARY 中补为 09-01 子条目
 
 ## 🟡 P1 — 占位 / 过薄章节（骨架在，肉没长出来）
 
