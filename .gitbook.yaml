@@ -1,7 +1,7 @@
-root: ./docs
+root: .
 structure:
-  readme: ../README.md
-  summary: ../SUMMARY.md
+  readme: README.md
+  summary: SUMMARY.md
 
 redirects:
-  quick-start: quick-start.md
+  quick-start: docs/00-quick-start.md
