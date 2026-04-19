@@ -106,6 +106,23 @@
 - [03-高级工作流](./docs/大师篇/03-高级工作流/README.md)
 - [04-驾驭工程：与 AI 智能体协作的艺术](./docs/驾驭工程：与AI智能体协作的艺术.md)
 
+## iOS 开发专题
+
+- [iOS AI Skills 实战清单](./docs/ios-ai-skills.md)
+- [iOS 开发常用工具清单](./docs/ios-tools.md)
+- [iOS 发布与 App Store Connect 工具速查](./docs/ios-release-and-asc.md)
+- [iOS 调试与性能优化](./docs/ios-debug-and-performance.md)
+- [iOS 面试与项目故事](./docs/ios-interview-and-project-story.md)
+- [iOS 学习索引](./docs/ios-index.md)
+
+## GitBook 专题
+
+- [GitBook 部署指南](./docs/gitbook-deployment.md)
+- [GitBook 自定义域名](./docs/gitbook-custom-domain.md)
+- [GitBook 域名状态](./docs/gitbook-domain-status.md)
+- [GitBook 域名故障排查](./docs/gitbook-domain-troubleshooting.md)
+- [GitBook 迁移清单](./docs/gitbook-migration-checklist.md)
+
 ## 参考资料
 
 - [site-entry 站点入口](./docs/site-entry.md)
@@ -116,23 +133,6 @@
 - [写作风格指南](./docs/writing-style.md)
 
 ## 附录
-
-### iOS 开发专题
-
-- [iOS AI Skills 实战清单](./docs/ios-ai-skills.md)
-- [iOS 开发常用工具清单](./docs/ios-tools.md)
-- [iOS 发布与 App Store Connect 工具速查](./docs/ios-release-and-asc.md)
-- [iOS 调试与性能优化](./docs/ios-debug-and-performance.md)
-- [iOS 面试与项目故事](./docs/ios-interview-and-project-story.md)
-- [iOS 学习索引](./docs/ios-index.md)
-
-### GitBook 部署
-
-- [GitBook 部署指南](./docs/gitbook-deployment.md)
-- [GitBook 自定义域名](./docs/gitbook-custom-domain.md)
-- [GitBook 域名状态](./docs/gitbook-domain-status.md)
-- [GitBook 域名故障排查](./docs/gitbook-domain-troubleshooting.md)
-- [GitBook 迁移清单](./docs/gitbook-migration-checklist.md)
 
 ### Prompt 模板库
 
