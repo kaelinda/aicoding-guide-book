@@ -106,7 +106,9 @@
 - [03-高级工作流](./docs/大师篇/03-高级工作流/README.md)
 - [04-驾驭工程：与 AI 智能体协作的艺术](./docs/驾驭工程：与AI智能体协作的艺术.md)
 
-## iOS 开发专题
+## 附录
+
+### iOS 开发专题
 
 - [iOS AI Skills 实战清单](./docs/ios-ai-skills.md)
 - [iOS 开发常用工具清单](./docs/ios-tools.md)
@@ -115,7 +117,7 @@
 - [iOS 面试与项目故事](./docs/ios-interview-and-project-story.md)
 - [iOS 学习索引](./docs/ios-index.md)
 
-## GitBook 专题
+### GitBook 专题
 
 - [GitBook 部署指南](./docs/gitbook-deployment.md)
 - [GitBook 自定义域名](./docs/gitbook-custom-domain.md)
@@ -123,16 +125,13 @@
 - [GitBook 域名故障排查](./docs/gitbook-domain-troubleshooting.md)
 - [GitBook 迁移清单](./docs/gitbook-migration-checklist.md)
 
-## 参考资料
+### 参考资料
 
-- [site-entry 站点入口](./docs/site-entry.md)
 - [故障排查指南](./docs/FAQ.md)
 - [术语表](./docs/glossary.md)
 - [学习路径图](./docs/learning-path.md)
 - [最佳实践案例集](./docs/best-practices.md)
 - [写作风格指南](./docs/writing-style.md)
-
-## 附录
 
 ### Prompt 模板库
 
