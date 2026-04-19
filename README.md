@@ -67,12 +67,14 @@
 - MCP 协议
 - Prompt 技巧
 - Rules 与 Skill
+- Claude Code 环境配置
 
 入口：
 - [Agent 概念](./docs/进阶篇/01-Agent概念/README.md)
 - [MCP 协议](./docs/进阶篇/02-MCP协议/README.md)
 - [Prompt 技巧](./docs/进阶篇/03-Prompt技巧/README.md)
 - [Rules 与 Skill](./docs/进阶篇/04-Rules与Skill/README.md)
+- [Claude Code 环境配置](./docs/进阶篇/10-ClaudeCode环境配置/README.md)
 
 ### 03 实战篇
 聚焦真实开发场景，学习如何把 AI 工具真正用进项目。

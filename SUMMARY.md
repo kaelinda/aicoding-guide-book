@@ -25,6 +25,7 @@
   - [01-01-Claude Code 命令详解](./docs/实战篇/01-ClaudeCode实战/01-ClaudeCode命令详解.md)
   - [01-02-环境配置](./docs/实战篇/01-ClaudeCode实战/02-环境配置.md)
   - [01-03-编程模式](./docs/实战篇/01-ClaudeCode实战/03-编程模式.md)
+  - [01-04-Claude Code 我的常用 Prompt](./docs/实战篇/01-ClaudeCode实战/13-ClaudeCode我的常用Prompt.md)
 - [02-Cursor 实战](./docs/实战篇/02-Cursor实战/README.md)
 - [03-代码编辑与效率工具](./docs/实战篇/03-代码编辑与效率工具/README.md)
 - [04-失败案例与修复](./docs/实战篇/04-失败案例与修复/README.md)
@@ -51,6 +52,22 @@
   - [08-02-Multi-Agent 协调模式](./docs/进阶篇/08-ClaudeCode新功能/02-Multi-Agent协调模式.md)
   - [08-03-ULTRAPLAN 长期规划](./docs/进阶篇/08-ClaudeCode新功能/03-ULTRAPLAN长期规划.md)
   - [08-04-语音与浏览器工具](./docs/进阶篇/08-ClaudeCode新功能/04-语音与浏览器工具.md)
+- [09-Claude Code 环境配置](./docs/进阶篇/10-ClaudeCode环境配置/README.md)
+  - [09-01-环境变量配置](./docs/进阶篇/10-ClaudeCode环境配置/01-环境变量配置.md)
+  - [09-02-自定义模型配置](./docs/进阶篇/10-ClaudeCode环境配置/02-自定义模型配置.md)
+  - [09-03-配置文件详解](./docs/进阶篇/10-ClaudeCode环境配置/03-配置文件详解.md)
+
+## 大师篇
+
+- [01-多 Agent 协作](./docs/大师篇/01-多Agent协作/README.md)
+- [02-OpenClaw 远程 Coding](./docs/大师篇/02-OpenClaw远程Coding/README.md)
+- [03-高级工作流](./docs/大师篇/03-高级工作流/README.md)
+
+## iOS 开发专题
+
+- [iOS AI Skills 实战清单](./docs/ios-ai-skills.md)
+- [iOS 开发常用工具清单](./docs/ios-tools.md)
+- [iOS 发布与 App Store Connect 工具速查](./docs/ios-release-and-asc.md)
 
 ## Prompt 模板库
 
