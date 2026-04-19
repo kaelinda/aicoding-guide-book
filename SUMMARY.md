@@ -45,7 +45,7 @@
   - [07-02-Multi-Agent 协调模式](./docs/进阶篇/08-ClaudeCode新功能/02-Multi-Agent协调模式.md)
   - [07-03-ULTRAPLAN 长期规划](./docs/进阶篇/08-ClaudeCode新功能/03-ULTRAPLAN长期规划.md)
   - [07-04-语音与浏览器工具](./docs/进阶篇/08-ClaudeCode新功能/04-语音与浏览器工具.md)
-  - [07-05-Claude.md 写法教程](./docs/进阶篇/09-ClaudeCode写法教程/claude.md-教程.md)
+  - [07-05-Claude.md 写法教程](./docs/进阶篇/09-ClaudeCode写法教程/README.md)
 - [08-Cursor 进阶功能](./docs/进阶篇/07-Cursor进阶功能/README.md)
   - [08-01-Custom Roles 自定义角色](./docs/进阶篇/07-Cursor进阶功能/01-Custom-Roles自定义角色.md)
   - [08-02-Multi-Agent 多智能体](./docs/进阶篇/07-Cursor进阶功能/02-Multi-Agent多智能体.md)
@@ -87,12 +87,14 @@
 
 ### 失败案例与修复
 
+- [💥 失败案例与修复](./docs/实战篇/04-失败案例与修复/README.md)
 - [01-代码能跑但逻辑错误](./docs/实战篇/04-失败案例与修复/01-代码能跑但逻辑错误.md)
 - [02-测试生成了但没有价值](./docs/实战篇/04-失败案例与修复/02-测试生成了但没有价值.md)
 - [03-重构后功能回归](./docs/实战篇/04-失败案例与修复/03-重构后功能回归.md)
 
 ### iOS 专项场景
 
+- [📱 iOS 专项场景](./docs/实战篇/05-iOS专项场景/README.md)
 - [01-SwiftUI 页面生成](./docs/实战篇/05-iOS专项场景/01-SwiftUI页面生成.md)
 - [02-ViewModel 拆分](./docs/实战篇/05-iOS专项场景/02-ViewModel拆分.md)
 - [03-网络层与错误处理](./docs/实战篇/05-iOS专项场景/03-网络层与错误处理.md)
@@ -106,6 +108,7 @@
 
 ## 参考资料
 
+- [site-entry 站点入口](./docs/site-entry.md)
 - [故障排查指南](./docs/FAQ.md)
 - [术语表](./docs/glossary.md)
 - [学习路径图](./docs/learning-path.md)
@@ -135,3 +138,11 @@
 
 - [Prompt 模板](./examples/prompts/README.md)
   - [01-需求澄清模板](./examples/prompts/01-需求澄清模板.md)
+  - [02-Bug排查模板](./examples/prompts/02-Bug排查模板.md)
+  - [03-重构优化模板](./examples/prompts/03-重构优化模板.md)
+  - [04-测试生成模板](./examples/prompts/04-测试生成模板.md)
+  - [05-CodeReview模板](./examples/prompts/05-CodeReview模板.md)
+  - [06-从零生成功能模板](./examples/prompts/06-从零生成功能模板.md)
+  - [07-PR总结模板](./examples/prompts/07-PR总结模板.md)
+- [AGENTS 示例](./examples/AGENTS-examples.md)
+- [Swift 模板](./examples/swift-templates.md)
