@@ -85,5 +85,5 @@ Each chapter directory (`基础篇/01-环境搭建/` etc.) has a `README.md` as 
 - `AGENTS.md` — full writing/style/maintenance guide (richer than this file for content work)
 - `CONTRIBUTING.md` — PR checklist, source-credibility tiers
 - `GEMINI.md` — parallel guidance for Gemini CLI users
-- `docs/gitbook-migration-checklist.md` / `docs/gitbook-deployment.md` — historical GitBook setup docs (now content chapters)
+- `gitbook-meta/` — maintainer-only GitBook setup / domain / migration docs (kept at repo root, outside the content root so GitBook.com won't sync them)
 - `resources/` — curated external links
