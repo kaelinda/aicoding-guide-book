@@ -128,13 +128,12 @@
 
 ### Prompt 模板库
 
-- [Prompt 模板](examples/prompts/README.md)
-  - [01-需求澄清模板](examples/prompts/01-需求澄清模板.md)
-  - [02-Bug排查模板](examples/prompts/02-Bug排查模板.md)
-  - [03-重构优化模板](examples/prompts/03-重构优化模板.md)
-  - [04-测试生成模板](examples/prompts/04-测试生成模板.md)
-  - [05-CodeReview模板](examples/prompts/05-CodeReview模板.md)
-  - [06-从零生成功能模板](examples/prompts/06-从零生成功能模板.md)
-  - [07-PR总结模板](examples/prompts/07-PR总结模板.md)
+- [01-需求澄清模板](examples/prompts/01-需求澄清模板.md)
+- [02-Bug排查模板](examples/prompts/02-Bug排查模板.md)
+- [03-重构优化模板](examples/prompts/03-重构优化模板.md)
+- [04-测试生成模板](examples/prompts/04-测试生成模板.md)
+- [05-CodeReview模板](examples/prompts/05-CodeReview模板.md)
+- [06-从零生成功能模板](examples/prompts/06-从零生成功能模板.md)
+- [07-PR总结模板](examples/prompts/07-PR总结模板.md)
 - [AGENTS 示例](examples/AGENTS-examples.md)
 - [Swift 模板](examples/swift-templates.md)
