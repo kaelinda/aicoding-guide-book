@@ -118,14 +118,6 @@
 - [iOS 面试与项目故事](ios-interview-and-project-story.md)
 - [iOS 学习索引](ios-index.md)
 
-### GitBook 专题
-
-- [GitBook 部署指南](gitbook-deployment.md)
-- [GitBook 自定义域名](gitbook-custom-domain.md)
-- [GitBook 域名状态](gitbook-domain-status.md)
-- [GitBook 域名故障排查](gitbook-domain-troubleshooting.md)
-- [GitBook 迁移清单](gitbook-migration-checklist.md)
-
 ### 参考资料
 
 - [故障排查指南](FAQ.md)
