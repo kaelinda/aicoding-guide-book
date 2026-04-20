@@ -36,7 +36,7 @@ codex --agent "重构 src/auth/ 目录，使用 JWT Bearer Token 替代 Session"
 |------|-------------|---------------|
 | **核心交互** | 对话式 + 工具调用 | 目标驱动 + 自主执行 |
 | **工具调用** | Read/Search/Edit/Bash | Read/Write/Bash + MCP |
-| **多 Agent** | BUDDY / Multi-Agent | 内置多角色 Agent |
+| **多 Agent** | Task 工具派发 Subagent | 内置多角色 Agent |
 | **会话管理** | 本地会话 | 云端同步（Codex Apps） |
 | **适用场景** | 精细控制、快速修改 | 复杂长任务、自动化 |
 | **成本** | 相对较低 | Token 消耗较大 |

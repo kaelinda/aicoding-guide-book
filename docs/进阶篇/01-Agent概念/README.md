@@ -319,12 +319,23 @@ Level 4: Multi-Agent Collaborator
 
 **当前主流 Agent 在 Level 2-3 之间**
 
+## 📱 iOS 读者该怎么用这些概念
+
+本章讲的是通用 Agent 理论。要看 iOS 场景下这些概念怎么落地：
+
+- **Agent 自主性 + 工具使用** → 配合 [基础篇/04 Agent 与工具](../../基础篇/04-Agent与工具/README.md) 的"Agent 是什么、打破误读"入门导览
+- **Claude Code 的 Agent 机制**（Task 工具、subagent） → [进阶篇/08-01](../08-ClaudeCode新功能/01-Task工具与Subagent.md)
+- **Cursor 的 Agent 机制**（Composer、Multi-Agent） → [进阶篇/07](../07-Cursor进阶功能/README.md)
+- **真实 iOS 项目里的 Agent 工作流** → [实战篇/01-11 完整项目实战](../../实战篇/01-ClaudeCode实战/11-ClaudeCode完整项目实战.md)（SwiftUI 番茄钟的端到端 walkthrough）
+- **Multi-Agent 在 iOS 项目里怎么用** → [实战篇/01-10 多 Agent 协作](../../实战篇/01-ClaudeCode实战/10-ClaudeCode多Agent协作.md)（Architect / Builder / Reviewer 修登录页 bug）
+
 ## ✅ 小结
 
 - Agent = AI + 工具 + 自主决策
 - Agent 有记忆、能执行、会迭代
 - 与 Agent 协作需要：明确需求、提供上下文、及时反馈
 - Agent 有边界，关键决策需要人工把关
+- **iOS 读者**：理论在本章，落地看上面 iOS 指引
 
 ## 🔗 相关资源
 

@@ -1,4 +1,4 @@
-# 02-Multi-Agent 多智能体
+# 02-Multi-Agent（多智能体）
 
 > 最多 8 个 Agent 并行协作，Composer 模型引领首个 Agentic 编程范式。
 

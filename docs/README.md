@@ -32,9 +32,11 @@
 |------|------|------|
 | 基础篇 | 环境 / 工具 / 第一个项目 | [开始](基础篇/01-环境搭建/README.md) |
 | 进阶篇 | Agent · MCP · Prompt · Rules | [进入](进阶篇/01-Agent概念/README.md) |
-| 实战篇 | Claude Code / Cursor / Codex 实战 | [进入](实战篇/01-ClaudeCode实战/README.md) |
+| 实战篇 · 工具 | Claude Code / Cursor / Codex | [进入](实战篇/01-ClaudeCode实战/README.md) |
+| 实战篇 · 失败案例 | 能跑但错 / 测试没价值 / 重构回归 | [进入](实战篇/04-失败案例与修复/README.md) |
+| 实战篇 · iOS 场景 | SwiftUI 生成 / ViewModel 拆分 / 网络层 | [进入](实战篇/05-iOS专项场景/README.md) |
 | 大师篇 | 多 Agent / 远程 Coding / 工作流 | [进入](大师篇/01-多Agent协作/README.md) |
-| iOS 专题 | SwiftUI · 调试 · 发布 · 面试 | [索引](ios-index.md) |
+| iOS 专题 | Skills · 调试 · 发布 · 面试 · 工具 | [索引](ios-index.md) |
 | 模板库 | Prompt / AGENTS / Swift 模板 | [examples](examples/prompts/README.md) |
 
 ---

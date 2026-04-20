@@ -7,9 +7,10 @@
 ## A
 
 ### Agent
-AI Agent（人工智能代理），能够自主执行任务的 AI 系统。
+AI Agent（智能体），能够自主执行任务的 AI 系统。
 - **组成**：大语言模型 + 工具 + 记忆 + 规划
 - **示例**：Claude Code、Codex CLI
+- **书内译名钦定**：正文一律写作 **Agent**（英文保留），首次出现时附注「（智能体）」。复数形式"多 Agent" / "Multi-Agent"均可，**中文词与英文词之间留一个空格**。避免把 Agent 译为"代理 / 代理人 / 智能体"单独使用，以免和别的章节口径冲突
 
 ### API Key
 API 密钥，用于认证 API 请求的凭证。
@@ -32,22 +33,45 @@ API 密钥，用于认证 API 请求的凭证。
 - **工具**：GitHub Actions、Fastlane
 
 ### Claude Code
-Anthropic 推出的终端 AI 编程助手。
-- **特点**：自主性强，可自动执行
-- **模型**：Claude 3.5 Sonnet
-- **价格**：$20/月
+Anthropic 推出的终端 AI 编程助手（CLI）。
+- **特点**：自主性强，可在终端内读写文件、执行命令
+- **默认模型**：Claude 4.x 系列（Sonnet / Opus，随订阅等级变化）
+- **定价**：Pro / Max 多档，以官网为准（[claude.com/claude-code](https://claude.com/claude-code)）
 
 ### Codex CLI
 OpenAI 推出的命令行编程工具。
-- **特点**：GPT-5 驱动，推理能力强
-- **模型**：GPT-5-Codex
-- **要求**：ChatGPT Plus 订阅
+- **特点**：GPT-5 系列模型驱动，推理能力强
+- **模型**：GPT-5-Codex（随 OpenAI 迭代更新）
+- **要求**：ChatGPT Plus 或同等订阅
+
+### Context Engineering
+上下文工程——系统性地组织 AI 会话中的上下文（指令、记忆、工具输出）。
+- **要点**：压缩旧对话、选择性注入文档、跨会话记忆
+- **对应**：进阶篇的长对话压缩、记忆管理章节
 
 ### Cursor
 AI 增强的代码编辑器，基于 VS Code。
-- **特点**：上手简单，可视化操作
-- **模型**：支持多种模型
-- **价格**：$20/月
+- **特点**：上手简单，可视化操作，支持 Multi-Agent / Cloud Agents
+- **模型**：支持 Claude / GPT / Gemini 等多家
+- **定价**：Pro / Business 多档，以官网为准
+
+### Cloud Agents
+Cursor 的云端代理功能——在远端运行长任务，完成后回传结果。
+- **用途**：大规模重构、跨仓库改动
+- **相关章节**：进阶篇/07-Cursor 进阶功能
+
+### Custom Roles
+Cursor 的自定义角色功能——预设不同系统提示给同一会话。
+- **用途**：PM / 开发 / 审查等角色切换
+
+---
+
+## B
+
+### Bugbot
+Cursor 的自动修复机器人——把测试失败 / CI 报错丢给它自动修。
+- **用途**：小改动的免人工 bug 修复
+- **相关章节**：进阶篇/07-Cursor 进阶功能
 
 ---
 
@@ -75,6 +99,11 @@ GitHub 提供的 CI/CD 服务。
 ---
 
 ## H
+
+### Hook（Claude Code Hook）
+Claude Code 的事件钩子机制——在 `SessionStart` / `UserPromptSubmit` / `PreToolUse` 等节点注入脚本。
+- **区别于 Git Hook**：Git Hook 挂在 git 生命周期；Claude Code Hook 挂在 AI 会话生命周期
+- **配置**：`~/.claude/settings.json` 的 `hooks` 字段
 
 ### Homebrew
 macOS 的包管理器。
@@ -148,6 +177,13 @@ Node Package Manager，Node.js 包管理器。
 
 ## R
 
+### Rules
+各编辑器的"项目规则"文件——告诉 AI 本仓库怎么写代码。
+- **Cursor**：`.cursorrules` 或 `.cursor/rules/*.mdc`
+- **Claude Code**：`CLAUDE.md`（全局 / 项目两层）
+- **Codex**：`AGENTS.md`
+- **相关章节**：进阶篇/04-Rules 与 Skill
+
 ### Reasoning
 推理能力，AI 处理复杂问题的能力。
 - **等级**：low、medium、high
@@ -156,6 +192,22 @@ Node Package Manager，Node.js 包管理器。
 ---
 
 ## S
+
+### Skill（Claude Code Skill）
+Claude Code 的技能插件——把一段 `SKILL.md` + 可选脚本打包给 Claude 调用。
+- **和 Hook 的区别**：Skill 由 AI 主动调用；Hook 由事件被动触发
+- **存放**：`~/.claude/skills/` 或项目 `.claude/skills/`
+- **相关章节**：进阶篇/04-Rules 与 Skill、实战篇/01-ClaudeCode 实战/03-常用 Skills
+
+### Subagent（子代理）
+在同一会话中派生的独立子 Agent，用于拆分任务或隔离上下文。
+- **Claude Code**：通过 `Agent` 工具 + `subagent_type` 派发
+- **用途**：并行探索、独立代码评审、保护主上下文
+
+### Sandbox（沙箱）
+受限执行环境——限制 AI 可触碰的文件、网络、命令。
+- **形式**：Docker、VM、macOS 沙箱 API、权限白名单
+- **目的**：降低"AI 执行了不该执行的命令"风险
 
 ### SwiftData
 Apple 推出的数据持久化框架。
@@ -189,6 +241,25 @@ AI 处理文本的最小单位。
 视图模型，MVVM 架构中的核心组件。
 - **作用**：连接 Model 和 View
 - **特点**：可测试、可复用
+
+---
+
+## 其它高频概念
+
+### Agentic Loop
+"Agent 主循环"——AI 在 `感知 → 推理 → 调用工具 → 观察结果 → 再推理` 中往复直到完成任务。
+- **关键点**：每一轮都可能消耗上下文，轮次越多成本越高
+- **控制**：工具调用预算、最大轮次、任务分解
+
+### Artifact
+AI 会话产出的独立对象（代码、文档、图表），可独立引用、版本化。
+- **例**：Claude 的 Artifacts UI、Cursor 的 Composer 输出
+
+### MCP Server
+实现 MCP 协议的具体服务——给 AI 提供某一类能力。
+- **官方示例**：`filesystem` / `github` / `playwright` / `context7`
+- **自建**：任意语言（Node / Python / Go）都可实现
+- **相关章节**：进阶篇/02-MCP 协议
 
 ---
 

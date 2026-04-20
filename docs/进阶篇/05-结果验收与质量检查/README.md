@@ -204,12 +204,120 @@ A: 先跑通功能，再优化质量。迭代改进。
 
 ---
 
+## 📱 iOS 版验收清单
+
+前面四步（功能 / 质量 / 安全 / 性能）放在 iOS 项目里的具体做法：
+
+### 第一步：功能性验收（iOS 版）
+
+- **Preview 能跑**：SwiftUI 的 `#Preview` 不崩、布局不乱
+- **模拟器跑主流程**：最低支持设备 + 最新设备各跑一遍
+  - iPhone SE（小屏 + 低配）
+  - iPhone 15 / 17 Pro（主流 + 大屏）
+  - iPad（如果支持）
+- **真机跑一次**：模拟器不暴露的签名 / 后台计时 / 权限问题，真机才能看出
+- **横竖屏 / 深色模式 / Dynamic Type**：各切换一次
+
+### 第二步：代码质量（iOS 版）
+
+```bash
+# SwiftLint（强烈建议入项目）
+brew install swiftlint
+swiftlint
+
+# Swift Format（官方 swift-format 或 SwiftFormat）
+swift-format -i -r Sources/
+
+# Build warnings 不能变多
+xcodebuild -scheme MyApp -destination 'platform=iOS Simulator,name=iPhone 15' build 2>&1 | grep -c warning:
+```
+
+iOS 特有 review 点：
+
+- `@State` / `@StateObject` / `@ObservedObject` / `@Environment` 用对了吗
+- `async` 函数是不是在 `@MainActor` 上调用
+- `Task { }` 有没有正确处理 cancellation
+- `weak self` / `[weak self]` 有没有在长生命周期闭包里漏掉
+
+### 第三步：安全检查（iOS 版）
+
+- `Info.plist` 里的权限描述（`NS*UsageDescription`）都填了吗
+- **Privacy Manifest (`PrivacyInfo.xcprivacy`)**（iOS 17+ 合规必须）
+- `Keychain` 存凭证、不要存 `UserDefaults`
+- URL scheme / Universal Links 是否校验来源
+- 所有网络请求走 HTTPS（`NSAllowsArbitraryLoads` 默认关闭）
+
+### 第四步：性能检查（iOS 版）
+
+```bash
+# 启动耗时（Hang Reports / MetricKit）
+# Xcode → Product → Profile → Time Profiler
+
+# 内存泄漏
+# Xcode → Product → Profile → Leaks
+
+# 电量与后台
+# Xcode → Debug → Debug Workflow → Energy Impact
+
+# App 包大小
+xcodebuild archive -scheme MyApp -archivePath ./build.xcarchive
+du -sh ./build.xcarchive/Products/Applications/MyApp.app
+```
+
+iOS 特有关注点：
+
+- 冷启动时间（< 400ms 目标）
+- 首屏渲染内存（< 100 MB 舒适区）
+- SwiftUI body 里有没有重复计算
+- 列表滚动 FPS（Instruments Time Profiler）
+- App 包大小（Xcode 16 的 App Thinning Report）
+
+### 自动化：iOS CI 最小配置
+
+```yaml
+# .github/workflows/ios-ci.yml
+jobs:
+  ios-check:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Lint
+        run: |
+          brew install swiftlint
+          swiftlint
+      - name: Build
+        run: |
+          xcodebuild build -scheme MyApp \
+            -destination 'platform=iOS Simulator,name=iPhone 15'
+      - name: Test
+        run: |
+          xcodebuild test -scheme MyApp \
+            -destination 'platform=iOS Simulator,name=iPhone 15'
+```
+
+### 让 AI 帮你验收的 prompt
+
+```text
+刚才的改动：<文件列表>
+
+作为 iOS 质检员，按以下顺序查一遍：
+1. 功能性：列出每个改动点的手工验证路径（点哪个按钮、看什么）
+2. 质量：看有无常见 SwiftUI 陷阱（@State 滥用 / body 重复计算 / weak self 漏写）
+3. 安全：新加的权限 / 网络 / 存储点是否需要改 Info.plist 或 Privacy Manifest
+4. 性能：是否引入 O(n²) 或主线程阻塞
+每项按"🔴 必改 / 🟡 建议 / 🟢 可忽略"分级。
+不要说"应该没问题"，只列能被验证的东西。
+```
+
+---
+
 ## 小结
 
 ```
 ✅ 建立了完整的验收流程
 ✅ 掌握了四层检查清单
 ✅ 学会了自动化测试方法
+✅ iOS 读者有对应的具体化清单
 
 下一步：了解 AI 编程的安全边界 →
 ```

@@ -1,4 +1,4 @@
-# 驾驭工程：与 AI 智能体协作的艺术
+# 驾驭工程：与 AI Agent 协作的艺术
 
 > 本章内容整理自 [walkinglabs/learn-harness-engineering](https://github.com/walkinglabs/learn-harness-engineering)，MIT 许可项目。
 
@@ -104,7 +104,7 @@ walkinglabs 推荐一种"Think-Sketch-Spec-Build-Integrate"工作流：
 
 ---
 
-## 多智能体协作模式
+## 多 Agent 协作模式
 
 walkinglabs 总结了 3 种进阶模式：
 
@@ -150,14 +150,14 @@ walkinglabs 的教程主要用 Claude Code 和 Cursor 演示，但 **OpenClaw** 
 
 | 维度 | Claude Code / Cursor | OpenClaw |
 |------|---------------------|----------|
-| 多智能体编排 | ❌ 需要手动 | ✅ 内置 subagent 机制 |
+| 多 Agent 编排 | ❌ 需要手动 | ✅ 内置 subagent 机制 |
 | 外部工具集成 | 一般 | ✅ 70+ opencli 适配器 |
 | 飞书/微信集成 | ❌ | ✅ 开箱即用 |
 | 自定义工作流 | 需要脚手架 | ✅ ClawFlow 原生支持 |
 | 定时任务 | ❌ | ✅ cron 内置 |
 | 记忆管理 | 有限 | ✅ 长期记忆 + 语义搜索 |
 
-OpenClaw 的 subagent 机制天然支持**多智能体协作模式**，可以让多个 AI 同时工作、互相交接。
+OpenClaw 的 subagent 机制天然支持**多 Agent 协作模式**，可以让多个 AI 同时工作、互相交接。
 
 ---
 

@@ -23,7 +23,7 @@
   - [02-05-Claude Code 新功能补充](基础篇/02-工具安装/04-ClaudeCode新功能补充.md)
   - [02-06-Codex 新功能补充](基础篇/02-工具安装/05-Codex新功能补充.md)
 - [03-第一个项目](基础篇/03-第一个项目/README.md)
-- [04-Agent 与工具](基础篇/04-Agent与工具/README.md)
+- [04-Agent（智能体）与工具](基础篇/04-Agent与工具/README.md)
   - [04-01-Agents 概念](基础篇/04-Agent与工具/03-Agents.md)
 - [05-练习项目](基础篇/05-练习项目/README.md)
   - [05-01-计数器 App](基础篇/05-练习项目/01-计数器App.md)
@@ -35,24 +35,31 @@
 
 - [01-Agent 概念](进阶篇/01-Agent概念/README.md)
 - [02-MCP 协议](进阶篇/02-MCP协议/README.md)
+  - [02-01-MCP 是什么](进阶篇/02-MCP协议/01-MCP是什么.md)
+  - [02-02-常见 MCP 生态](进阶篇/02-MCP协议/02-常见MCP生态.md)
+  - [02-03-自建 MCP Server](进阶篇/02-MCP协议/03-自建MCP-Server.md)
+  - [02-04-iOS 开发者的 MCP 清单](进阶篇/02-MCP协议/04-iOS开发者的MCP清单.md)
 - [03-Prompt 技巧](进阶篇/03-Prompt技巧/README.md)
+  - [03-01-结构化 Prompt](进阶篇/03-Prompt技巧/01-结构化Prompt.md)
+  - [03-02-需求澄清模板](进阶篇/03-Prompt技巧/02-需求澄清模板.md)
+  - [03-03-调试 Prompt](进阶篇/03-Prompt技巧/03-调试Prompt.md)
+  - [03-04-Prompt 版本管理](进阶篇/03-Prompt技巧/04-Prompt版本管理.md)
+  - [03-05-iOS 场景示例](进阶篇/03-Prompt技巧/05-iOS场景示例.md)
 - [04-Rules 与 Skill](进阶篇/04-Rules与Skill/README.md)
   - [04-01-Skill 推荐](进阶篇/04-Rules与Skill/02-Skill推荐.md)
 - [05-结果验收与质量检查](进阶篇/05-结果验收与质量检查/README.md)
 - [06-AI 编程安全边界](进阶篇/06-AI编程安全边界/README.md)
 - [07-Cursor 进阶功能](进阶篇/07-Cursor进阶功能/README.md)
   - [07-01-Custom Roles 自定义角色](进阶篇/07-Cursor进阶功能/01-Custom-Roles自定义角色.md)
-  - [07-02-Multi-Agent 多智能体](进阶篇/07-Cursor进阶功能/02-Multi-Agent多智能体.md)
+  - [07-02-Multi-Agent（多智能体）](进阶篇/07-Cursor进阶功能/02-Multi-Agent多智能体.md)
   - [07-03-Automations 自动化](进阶篇/07-Cursor进阶功能/03-Automations自动化.md)
   - [07-04-Cloud Agents 云端代理](进阶篇/07-Cursor进阶功能/04-Cloud-Agents云端代理.md)
   - [07-05-Bugbot 自动修复](进阶篇/07-Cursor进阶功能/05-Bugbot自动修复.md)
   - [07-06-MCP Apps 应用集成](进阶篇/07-Cursor进阶功能/06-MCP-Apps应用集成.md)
   - [07-07-Team 团队协作功能](进阶篇/07-Cursor进阶功能/07-Team团队协作功能.md)
-- [08-Claude Code 新功能](进阶篇/08-ClaudeCode新功能/README.md)
-  - [08-01-BUDDY AI 伙伴系统](进阶篇/08-ClaudeCode新功能/01-BUDDY-AI伙伴系统.md)
-  - [08-02-Multi-Agent 协调模式](进阶篇/08-ClaudeCode新功能/02-Multi-Agent协调模式.md)
-  - [08-03-ULTRAPLAN 长期规划](进阶篇/08-ClaudeCode新功能/03-ULTRAPLAN长期规划.md)
-  - [08-04-语音与浏览器工具](进阶篇/08-ClaudeCode新功能/04-语音与浏览器工具.md)
+- [08-Claude Code 进阶特性](进阶篇/08-ClaudeCode新功能/README.md)
+  - [08-01-Task 工具与 Subagent](进阶篇/08-ClaudeCode新功能/01-Task工具与Subagent.md)
+  - [08-02-浏览器工具与 MCP 生态](进阶篇/08-ClaudeCode新功能/02-浏览器工具与MCP生态.md)
 - [09-Claude Code 写法教程](进阶篇/09-ClaudeCode写法教程/README.md)
   - [09-01-claude.md 教程](进阶篇/09-ClaudeCode写法教程/claude.md-教程.md)
 - [10-Claude Code 环境配置](进阶篇/10-ClaudeCode环境配置/README.md)
@@ -80,11 +87,19 @@
 
 ### Cursor 实战
 
-- [01-基础用法](实战篇/02-Cursor实战/README.md)
+- [01-总览与安装](实战篇/02-Cursor实战/README.md)
+- [02-核心功能](实战篇/02-Cursor实战/01-核心功能.md)
+- [03-iOS 开发实战](实战篇/02-Cursor实战/02-iOS开发实战.md)
+- [04-高级技巧](实战篇/02-Cursor实战/03-高级技巧.md)
+- [05-配置与常见问题](实战篇/02-Cursor实战/04-配置与常见问题.md)
 
 ### Codex 实战
 
-- [01-使用技巧](实战篇/03-Codex实战/README.md)
+- [01-总览与安装](实战篇/03-Codex实战/README.md)
+- [02-基本使用](实战篇/03-Codex实战/01-基本使用.md)
+- [03-高级功能](实战篇/03-Codex实战/02-高级功能.md)
+- [04-iOS 开发实战](实战篇/03-Codex实战/03-iOS开发实战.md)
+- [05-安全与配置](实战篇/03-Codex实战/04-安全与配置.md)
 
 ### 失败案例与修复
 
@@ -105,7 +120,7 @@
 - [01-多 Agent 协作](大师篇/01-多Agent协作/README.md)
 - [02-OpenClaw 远程 Coding](大师篇/02-OpenClaw远程Coding/README.md)
 - [03-高级工作流](大师篇/03-高级工作流/README.md)
-- [04-驾驭工程：与 AI 智能体协作的艺术](驾驭工程：与AI智能体协作的艺术.md)
+- [04-驾驭工程：与 AI Agent 协作的艺术](大师篇/04-驾驭工程/README.md)
 
 ## 附录
 

@@ -232,6 +232,61 @@ A: 效率优先，快速原型 → 安全审查 → 合并上线。
 
 ---
 
+## 📱 iOS 场景的安全边界
+
+### iOS 特有的红线区
+
+这些领域在 iOS 上尤其不要让 AI 独立操作：
+
+| 领域 | 为什么是红线 | 怎么做 |
+|------|------|------|
+| **Keychain 访问** | 凭证读写错一行就泄密 | 人工 review 每一次 `SecItemAdd/Copy/Delete` 调用 |
+| **签名与证书** | `provisioning profile` / `entitlements` 配错会导致线上发布失败或拒绝审核 | AI 只读不改；改动通过 Apple Developer 官网或 Xcode GUI 手工执行 |
+| **StoreKit / IAP** | 订阅逻辑错 = 用户免费白嫖或重复扣费 | 必须真机 + 沙盒账号完整走一遍；AI 输出的 `Transaction` 处理代码逐行看 |
+| **Privacy Manifest** | iOS 17+ 合规必须；错了会被 App Store 拒 | AI 可以协助生成 `PrivacyInfo.xcprivacy` 模板，但最终条目由人工按 [Apple 官方 Required Reason API](https://developer.apple.com/documentation/bundleresources/privacy_manifest_files) 清单核对 |
+| **App Group / Shared Container** | 多个 target 共享数据，权限边界错了会导致数据覆盖或泄露 | 人工审核 entitlements、bundle id 配置 |
+| **Universal Links / URL Schemes** | 没校验来源会被第三方 app 伪造调起 | AI 可写脚手架；**必须加来源校验 + 参数白名单**，人工确认 |
+
+### iOS 特有的橙线区（需人工审查）
+
+- **UserDefaults 存敏感数据**：AI 很容易把 token / 用户信息写进 UserDefaults —— **不允许**，必须 Keychain
+- **WebView 里的 JS Bridge**：AI 生成的 JS Bridge 如果没做 message 校验，会被 xss 控制 native
+- **后台任务 (`BGTaskScheduler`)**：错用会导致电量问题或任务不执行
+- **推送 payload 处理**：payload 信任来源校验要到位，防止伪造
+- **共享相册 / 文件访问**：AI 写 `PHPicker` / `DocumentPicker` 要注意权限提示文案合规
+
+### iOS 特有的绿线区（AI 可以独立做）
+
+- SwiftUI View 布局
+- `#Preview` 代码
+- Swift Testing 用例（结构层面，业务判定仍需人工看）
+- SwiftLint / swift-format 配置
+- README / 文档 / 注释生成
+- Storyboard → SwiftUI 的纯 UI 平移（不涉及业务逻辑）
+
+### iOS 具体防护手势
+
+把这几条钉进项目根的 `CLAUDE.md`：
+
+```markdown
+- 不要直接修改 *.xcodeproj/project.pbxproj 的签名相关字段
+- 不要在代码里硬编码 API Key / Team ID / Bundle ID
+- 不要在 UserDefaults 里存 token 或 user credentials
+- 涉及 Keychain / StoreKit / Privacy Manifest 的改动，停下等我手动 review
+- 新增任何 entitlement 前先列出所需能力，让我批准
+```
+
+### 真机验证不可跳
+
+iOS 安全类改动，**模拟器不算验证**。至少要：
+
+- 真机签名编译通过
+- 真机上走一遍冷启动 + 主流程
+- 涉及 IAP 的：沙盒账号 + TestFlight 走一遍
+- 涉及后台任务的：让 app 真实在后台待超过 15 分钟再回来
+
+---
+
 ## 小结
 
 ```
@@ -239,6 +294,9 @@ A: 效率优先，快速原型 → 安全审查 → 合并上线。
 🟠 橙线区：数据库、文件、网络 - 需要人工审查
 💛 黄线区：算法、业务逻辑 - 需要测试验证
 ✅ 绿线区：UI、测试、文档 - AI 可以独立完成
+
+iOS 加码：Keychain / 签名 / StoreKit / Privacy Manifest 全部进红线。
+真机验证不可跳。
 
 记住：AI 是工具，安全责任在你。
 ```
