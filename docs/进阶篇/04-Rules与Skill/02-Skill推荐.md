@@ -221,6 +221,127 @@
 
 ---
 
+## 🧩 值得直接装的外部 Skill
+
+除了自己造 Skill，社区里已经有不少高质量开源 Skill 可以直接装来用。下面是 iOS 方向第一批值得收藏的：
+
+### Xcode Build Optimization Agent Skill
+
+- **地址**：<https://github.com/AvdLee/Xcode-Build-Optimization-Agent-Skill>
+- **作者**：[Antoine van der Lee](https://www.avanderlee.com/)（RocketSim 作者）
+- **解决什么**：自动 benchmark 你的 Xcode clean build / 增量 build，再从 40+ 个检查点里找出可优化项，生成一份 `optimization-plan.md` 等你审批后再落地
+
+适合这样的场景：
+
+- 增量 build 越来越慢、不知道从哪下手
+- 最近某次 commit 后 build 突然变长
+- SPM 依赖图臃肿，想理清 plugin / 分支 pin / 模块分层
+- 有 Swift macro、swift-syntax 连锁重编疑虑
+
+它是一个**编排（orchestrator）Skill + 5 个专家 Skill** 的组合包：
+
+| Skill | 用途 |
+|------|------|
+| `xcode-build-orchestrator` | 端到端工作流：基准 → 分析 → 排序 → 审批 → 修改 → 再基准 |
+| `xcode-build-benchmark` | 可复现的 clean / 增量 build 基准 |
+| `xcode-compilation-analyzer` | Swift 编译热点和代码层建议 |
+| `xcode-project-analyzer` | Build settings、scheme、script phase、依赖审计 |
+| `spm-build-analysis` | SPM 包图、plugin 开销、模块变体 |
+| `xcode-build-fixer` | 应用经你批准的优化并重新基准验证 |
+
+**安装**（装全 6 个，orchestrator 依赖其他 5 个）：
+
+```bash
+npx skills add https://github.com/avdlee/xcode-build-optimization-agent-skill
+```
+
+Claude Code 用户也可以走 plugin marketplace：
+
+```bash
+/plugin marketplace add AvdLee/Xcode-Build-Optimization-Agent-Skill
+/plugin install xcode-build-skills@xcode-build-skills
+```
+
+**典型流程**：
+
+1. 打开你的 Xcode 项目到 AI 编程工具（Claude Code / Cursor / Codex）
+2. 告诉 agent：
+
+   > Use the /xcode-build-orchestrator skill to analyze build performance and come up with a plan for improvements.
+
+3. 它会跑基准、跑三个分析器、输出 `.build-benchmark/optimization-plan.md`，**不改任何项目文件**
+4. 你在 plan 里勾选想采纳的建议，再让 agent 执行：
+
+   > Implement the approved items from the optimization plan at .build-benchmark/optimization-plan.md, then re-benchmark to verify the improvements.
+
+5. fixer 会改配置、跑二次基准对比，给你留一份可评审的 diff
+
+**值得借鉴的设计**：
+
+- **先分析 → 再审批 → 再执行**，三段分离：比一把梭安全得多
+- **证据留档**：`optimization-plan.md` 同时是文档、审计凭证、PR 评审材料
+- **编排 + 专家分工**：大任务拆成多个职责清晰的子 Skill，一个出问题不会连带污染其他
+
+> 📌 如果你要自己造 Skill，照着这个结构设计是不会错的：一份给人看的计划 + 一组可独立运行的专家 + 一个负责落地的 fixer。
+
+---
+
+### Swift Concurrency Agent Skill
+
+- **地址**：<https://github.com/AvdLee/Swift-Concurrency-Agent-Skill>
+- **作者**：[Antoine van der Lee](https://www.avanderlee.com/)
+- **解决什么**：把 Swift Concurrency（actor / Sendable / Task / async stream / Swift 6 strict concurrency）的专家经验封装成 Skill，让 AI 能准确诊断并发问题，而不是瞎猜
+
+适合这样的场景：
+
+- 团队正在往 Swift 6 / strict concurrency 迁移，需要安全默认和一键排查
+- 遇到 data race、isolation error、async 测试偶发失败
+- 想要性能向的并发模式（actor、task、Sendable、async stream）参考
+
+**安装**：
+
+```bash
+# skills.sh（推荐）
+npx skills add https://github.com/avdlee/swift-concurrency-agent-skill --skill swift-concurrency
+
+# Claude Code plugin marketplace
+/plugin marketplace add AvdLee/Swift-Concurrency-Agent-Skill
+/plugin install swift-concurrency@swift-concurrency-agent-skill
+```
+
+想让团队每个人都装上，在项目的 `.claude/settings.json` 里加：
+
+```json
+{
+  "enabledPlugins": {
+    "swift-concurrency@swift-concurrency-agent-skill": true
+  },
+  "extraKnownMarketplaces": {
+    "swift-concurrency-agent-skill": {
+      "source": { "source": "github", "repo": "AvdLee/Swift-Concurrency-Agent-Skill" }
+    }
+  }
+}
+```
+
+**典型触发**：
+
+> Use the swift concurrency skill and analyze the current project for Swift Concurrency improvements.
+
+Agent 会参考 Skill 里的 triage / playbook，跳进对应参考文件回答，而不是凭训练记忆瞎编。
+
+### 同作者值得关注的其他 Skill
+
+Antoine 还维护了一组同系列 iOS 专家 Skill，都是同样的安装方式，用到再装：
+
+- [SwiftUI Agent Skill](https://github.com/AvdLee/SwiftUI-Agent-Skill) — SwiftUI 专家指导
+- [Core Data Agent Skill](https://github.com/AvdLee/Core-Data-Agent-Skill) — Core Data 专家指导
+- [Swift Testing Agent Skill](https://github.com/AvdLee/Swift-Testing-Agent-Skill) — Swift Testing / XCTest 专家指导
+
+> 💡 这几个都是「通用 AI 模型 + 领域专家知识」的典型范式：不是 fine-tune 新模型，而是把专家经验塞进 Skill 里，让 AI 知道遇到对应问题该去哪里查、怎么组织输出。
+
+---
+
 ## ⚠️ 做 Skill 最容易踩的坑
 
 ### 坑 1：把 Skill 做得太大、太全能

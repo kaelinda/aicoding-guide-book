@@ -94,6 +94,10 @@ xcodebuild archive -scheme MyApp -archivePath build/MyApp.xcarchive
 xcodebuild test -scheme MyApp | xcbeautify
 ```
 
+### AI 驱动的构建速度优化
+
+如果 clean / 增量 build 已经慢到影响日常迭代，直接用 AI Skill 跑基准 + 出优化计划：见 [进阶篇 · Skill 推荐 → Xcode Build Optimization Agent Skill](./进阶篇/04-Rules与Skill/02-Skill推荐.md#xcode-build-optimization-agent-skill)。
+
 ---
 
 ## 3. 依赖管理工具
